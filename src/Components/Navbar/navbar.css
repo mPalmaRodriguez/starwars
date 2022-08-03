@@ -1,0 +1,11 @@
+.links:hover{
+    background-color: #5E9CC8;
+}
+.img{
+    margin-right: 10px;
+    margin-bottom: 1px;
+    margin-left: 20px;
+}
+a.links{
+    color: whitesmoke;
+}

@@ -1,0 +1,21 @@
+.line-footer{
+    background-color: #141A19;
+}
+
+.l-imagei{
+    background-color: black;
+    border-radius: 50%;
+}
+.l-image:hover{
+    background-color: palevioletred;
+}
+.imagei{
+    color: palevioletred;
+}
+.imageg{
+    color: aliceblue;
+}
+
+.image:hover{
+    color: #30353a;
+}
