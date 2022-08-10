@@ -6,6 +6,9 @@
     margin-bottom: 1px;
     margin-left: 20px;
 }
-a.links{
+.nav-link{
     color: whitesmoke;
+}
+.nav-link:hover{
+    color: palevioletred;
 }

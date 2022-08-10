@@ -17,8 +17,8 @@ const NavbarApp = () => {
             <Navbar.Collapse id="basic-navbar-nav" style={{paddingLeft:"440px"}}>
                 <Nav className="me-auto">
                     <Link  className='nav-link' to="/">INICIO</Link>
-                    <Link  className='nav-link' to="/page">PERSONAJES</Link>
-                    <Link  className='nav-link' to="/page">PLANETAS</Link>
+                    <Link  className='nav-link' to="/characters">PERSONAJES</Link>
+                    <Link  className='nav-link' to="/planets">PLANETAS</Link>
 
 
                 </Nav>

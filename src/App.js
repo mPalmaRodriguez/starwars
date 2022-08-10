@@ -4,7 +4,8 @@ import NavbarApp from './Components/Navbar/Index';
 import "bootstrap/dist/css/bootstrap.min.css";
 import FooterApp from './Components/Footer/Index';
 import { Route, Routes} from "react-router-dom";
-import HomePage from './Pages/HomePage';
+import Cardcharacter from './Pages/characters/Index';
+import Cardplanet from './Pages/planets/Index';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
     <NavbarApp/>
     <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/page' element={<HomePage/>}/>
+      <Route path='/characters' element={<Cardcharacter/>}/>
+      <Route path='/planets' element={<Cardplanet/>}/>
     </Routes>
     <FooterApp/>
     </div>
