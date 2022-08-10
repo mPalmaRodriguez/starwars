@@ -10,9 +10,47 @@
 button{
     background-color: palevioletred;
 }
-card.text{
-    min-height: 10hv;
-    height: 10hv;
-    overflow-y: scroll;
-    overflow-x: auto;
+
+.cardApp{
+box-shadow: 0 0 5px #212529;
+transition: all 0.2s ease-in-out;
+}
+
+.cardApp:hover{
+transform: scale(1.1);
+}
+
+.card-text{
+    background:black;
+     color:whitesmoke;
+     text-align: justify;
+     min-height: 10vh;
+     height: 40vh;
+     overflow-y: scroll;
+     overflow-x: hidden;
+}
+.card-text::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+
+.card-text::-webkit-scrollbar:vertical {
+    width:5px;
+    margin-left: 10px;
+}
+
+.card-text::-webkit-scrollbar-thumb{
+    background-color:#5E9CC8;
+    border-radius: 8px;
+}
+.general{
+width: 18rem;
+ border:solid 3px #5E9CC8;
+ text-align: center;
+}
+.general{
+    box-shadow: 0 0 5px black;
+    transition: all 0.2s ease-in-out;
+}
+.general:hover{
+    transform: scale(1.1);
 }
