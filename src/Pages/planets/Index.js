@@ -1,22 +1,28 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
-import prueba from "../../Components/Assets/img/leia.jpg";
-import Card from "react-bootstrap/Card";
-import './planets.css';
+import { useEffect } from "react";
+import {UsePlanets} from "../../Hooks/UsePlanets";
+import CardPlanets from "./cards";
+const Planets = () => {
+    const {getAllPlanets, dataPlanets} = UsePlanets();
+    useEffect(()=>{
+        getAllPlanets();
 
-
-const Cardplanet = () => {
-  return (
-    <Card style={{ width: "18rem" , border:"solid 3px #5E9CC8"}} className="m-2 text-center">
-      <Card.Img variant="top" src={{prueba}} style={{width: "282px", height:"400px"}}/>
-      <Card.Body style={{background:"black", color:"whitesmoke" }}>
-        <Card.Title style={{background:"black", color:"#5E9CC8" }}>prueba planetas</Card.Title>
-        <Card.Text style={{background:"black", color:"whitesmoke"}} >prueba planetas x2
-        </Card.Text>
-        <Button className="buttonCard" style={{background:"palevioletred", border:" solid 2px "}}>Si</Button>
-      </Card.Body>
-    </Card>
-  );
+        console.log(dataPlanets);
+    }, []);
+    return(
+        <div>
+            <h2 style={{textAlign:"center", textShadow:"0 0 4px #FFE919", fontWeight:"bolder", fontSize:"xxx-large"}} >LISTADO DE PLANETAS</h2>
+            <div className="d-flex justify-content-center flex-wrap container-fluid">
+                {dataPlanets.map((planets)=>(
+                    <CardPlanets
+                    key={planets.name}
+                    planeta={planets.name}
+                    clima={planets.climate}
+                    terreno={planets.terrain}
+                    creado={planets.created}
+                    />
+                ))}
+            </div>
+        </div>
+    );
 };
-
-export default Cardplanet;
+export default Planets;

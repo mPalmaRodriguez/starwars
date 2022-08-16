@@ -9,11 +9,11 @@ const CardApp = (props) => {
     <Card className="general m-2">
       <Card.Img variant="top" src={props.imageSrc}  style={{width: "282px", height:"400px"}}/>
       <Card.Body style={{background:"black", color:"whitesmoke" }}>
-        <Card.Title style={{background:"black", color:"#5E9CC8" }}>{props.title}</Card.Title>
+        <Card.Title style={{background:"black", color:"#FFE919" }}>{props.title}</Card.Title>
         <Card.Text>
           {props.texto}
         </Card.Text>
-        <Button className="buttonCard" style={{background:"palevioletred", border:" solid 2px "}} >{props.boton}</Button>
+        <Button className="buttonCard">{props.boton}</Button>
       </Card.Body>
     </Card>
   );

@@ -33,7 +33,7 @@ const cards = [
     Titulo: "Chewbacca",
     Imagen: imgCard4,
     Texto: "Chewbacca,llamado afectuosamente Chewie por sus amigos, fue un guerrero wookiee, un contrabandista y un luchador de resistencia que peleó en las Guerras Clon, la Guerra Civil Galáctica y el Guerra Fría. Fue criado en el planeta Kashyyyk y se convirtió en un líder militar. Durante las Guerras Clon, fue capturado por esclavistas trandoshanos y hecho prisionero en Wasskah, donde trabajó con otra cautiva, la Comandante Jedi Ahsoka Tano, para escapar.",
-    Boton:"Más sobre Minecraft"
+    Boton:"Más sobre Chewbacca"
   },
 
 ];

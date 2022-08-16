@@ -1,0 +1,29 @@
+.cuerpo {
+  background: black;
+  color: whitesmoke;
+}
+.titulo {
+  background: black;
+  color: #ffe919;
+  font-size: larger;
+}
+.lista {
+  background: black;
+  color: whitesmoke;
+  border: solid 0.5px #2d2b55;
+}
+.buttonCard {
+  background: #ffe919;
+  border: solid 2px;
+  margin-top: 12px;
+  color: black;
+  font-weight: 600;
+}
+.buttonCard:hover {
+  color: whitesmoke;
+  background: black;
+  border: solid 2px #ffe919;
+}
+.fecha {
+  margin-top: 12px;
+}

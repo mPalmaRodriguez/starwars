@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const UsePerson = () => {
-
-    const [dataPeople, setDataPeople] = useState([])
+  const [dataPeople, setDataPeople] = useState([]);
 
   const getAllPerson = () => {
     var requestOptions = {
@@ -10,14 +9,14 @@ export const UsePerson = () => {
       redirect: "follow",
     };
 
-    fetch("https://swapi.dev/api/people", requestOptions)
-      .then((response) => response.text())
-      .then((result) => setDataPeople([result]))
+    fetch("https://swapi.dev/api/people/", requestOptions)
+      .then((response) => response.json())
+      .then((result) => setDataPeople(result.results))
       .catch((error) => console.log("error", error));
   };
 
   return {
     getAllPerson,
-    dataPeople
+    dataPeople,
   };
 };
