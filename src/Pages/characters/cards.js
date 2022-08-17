@@ -13,6 +13,7 @@ export const CardCharacters = ({
   altura,
   peso,
   cumpleaños,
+  img
 }) => {
   return (
     <Card
@@ -22,6 +23,7 @@ export const CardCharacters = ({
         <Card.Title className="titulo">
           {nombre}
         </Card.Title>
+        <Card.Img src={img}></Card.Img>
         <ListGroup>
           <ListGroup.Item className="lista"><b>Color del cabello:  </b>{cabello}</ListGroup.Item>
           <ListGroup.Item className="lista"><b>Color de ojos:  </b>{ojos}</ListGroup.Item>
@@ -31,6 +33,7 @@ export const CardCharacters = ({
           <ListGroup.Item className="lista"><b>Peso:  </b>{peso}</ListGroup.Item>
           <ListGroup.Item className="lista"><b>Cumpleaños:  </b>{cumpleaños}</ListGroup.Item>
         </ListGroup>
+      
       </Card.Body>
         <Button className="buttonCard"><p style={{marginBottom:"auto"}}>Detalles del personaje</p>{nombre}</Button>
     </Card>
