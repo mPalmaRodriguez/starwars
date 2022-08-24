@@ -35,7 +35,7 @@ export const CardCharacters = ({
         </ListGroup>
       
       </Card.Body>
-        <Button className="buttonCard"><p style={{marginBottom:"auto"}}>Detalles del personaje</p>{nombre}</Button>
+        <Button className="buttonCard" href={`/Details/${nombre}`}><p style={{marginBottom:"auto"}} >Detalles del personaje</p>{nombre}</Button>
     </Card>
   );
 };

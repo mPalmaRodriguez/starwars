@@ -1,0 +1,12 @@
+.title{
+    text-align: center;
+}
+.tarjetas{
+    display: flex;
+    justify-content: center;
+}
+.tarjetas1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

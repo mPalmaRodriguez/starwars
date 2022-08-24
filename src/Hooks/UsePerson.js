@@ -19,6 +19,10 @@ export const UsePerson = () => {
       setContador(9);
     }
   };
+  // function volver (){
+  //   window.history.go(-1);
+  // }
+  
 
   const getAllPerson = async (numberPage) => {
     try {
@@ -43,5 +47,6 @@ export const UsePerson = () => {
     Contador,
     aumentar,
     disminuir,
+    // volver,
   };
 };

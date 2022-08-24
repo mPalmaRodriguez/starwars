@@ -10,7 +10,7 @@ const Planets = () => {
   useEffect(() => {
     getAllPlanets(Contador);
 
-    // console.log(dataPlanets);
+      // console.log(dataPlanets);
   }, [dataPlanets]);
   return (
     <div>

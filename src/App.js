@@ -6,6 +6,7 @@ import FooterApp from './Components/Footer/Index';
 import { Route, Routes} from "react-router-dom";
 import Cardcharacter from './Pages/characters/Index';
 import Cardplanet from './Pages/planets/Index';
+import Details from './Components/Details/Details';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/characters' element={<Cardcharacter/>}/>
       <Route path='/planets' element={<Cardplanet/>}/>
+      <Route path='/Details/:id' element={<Details/>}/>
     </Routes>
     <FooterApp/>
     </div>
