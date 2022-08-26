@@ -1,14 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { UsePerson } from "../../Hooks/UsePerson";
 import { CardCharacters } from "./cards";
 import img from "../../Components/Assets/img/xdd.png";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 const Characters = () => {
-  const { getAllPerson, dataPeople, Contador, disminuir, aumentar } =
-    UsePerson();
+  const { getAllPerson, dataPeople, Contador, disminuir, aumentar } = UsePerson();
+  const [disabledRight, setDisabledRight] = useState(false);
+
   useEffect(() => {
     getAllPerson(Contador);
+    if(Contador ===9){
+      setDisabledRight(true);
+    }
+  if(Contador < 9){
+    setDisabledRight(false);
+  }
 
     // console.log(dataPeople);
   }, [dataPeople]);
@@ -38,6 +45,9 @@ const Characters = () => {
             cumpleaños={people.birth_year}
             estiloBoton={people.eye_color}
             img={img}
+            keyName={people.name}
+            nombres={people.name}
+            num={Contador}
           />
         ))}
       </div>
@@ -60,6 +70,7 @@ const Characters = () => {
         >
           {Contador}
         </b>
+        <li className={disabledRight ? "page-item disabled": "page-item"}>
         <button style={{ display: "contents" }} onClick={aumentar}>
           Siguiente
           <BsArrowRightCircleFill
@@ -67,6 +78,7 @@ const Characters = () => {
             style={{ color: "black", marginLeft: "2px", marginTop: "1px" }}
           />
         </button>
+        </li>
       </div>
     </div>
   );

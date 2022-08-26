@@ -16,7 +16,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/characters' element={<Cardcharacter/>}/>
       <Route path='/planets' element={<Cardplanet/>}/>
-      <Route path='/Details/:id' element={<Details/>}/>
+      <Route path='/Details/:nombres/:num' element={<Details/>}/>
     </Routes>
     <FooterApp/>
     </div>

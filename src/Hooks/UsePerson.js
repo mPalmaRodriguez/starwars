@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export const UsePerson = () => {
   const [dataPeople, setDataPeople] = useState([]);
+  const [dataApi, setDataApi] = useState([]);
 
   const [Contador, setContador] = useState(1);
 
@@ -19,10 +20,29 @@ export const UsePerson = () => {
       setContador(9);
     }
   };
-  // function volver (){
-  //   window.history.go(-1);
-  // }
   
+  const getDataApi = async (urlData)=>{
+    try {
+      var requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+
+      await fetch(
+        urlData,
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) => setDataApi(result))
+        .catch((error) => console.log("error", error));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const back = ()=>{
+    window.history.go(-1);
+  }
 
   const getAllPerson = async (numberPage) => {
     try {
@@ -30,6 +50,7 @@ export const UsePerson = () => {
         method: "GET",
         redirect: "follow",
       };
+
       await fetch(
         `https://swapi.dev/api/people/?page=${numberPage}`,
         requestOptions
@@ -47,6 +68,8 @@ export const UsePerson = () => {
     Contador,
     aumentar,
     disminuir,
-    // volver,
+    getDataApi,
+    dataApi,
+    back
   };
 };

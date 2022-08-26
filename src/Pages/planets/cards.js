@@ -14,7 +14,7 @@ export const CardPlanets = ({
   return (
     <Card
       style={{ width: "18rem", border: "solid 3px #5E9CC8", background:"black" }}
-      className="m-2 text-center">
+      className=" general m-2 text-center">
       <Card.Body className="cuerpo">
         <Card.Title className="titulo"> <b>Planeta:  </b>
           {planeta}

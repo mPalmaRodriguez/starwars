@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { ListGroup } from "react-bootstrap";
 import "./characters.css";
+import { Link } from "react-router-dom";
 
 export const CardCharacters = ({
   nombre,
@@ -13,29 +14,60 @@ export const CardCharacters = ({
   altura,
   peso,
   cumpleaños,
-  img
+  img,
+  keyName,
+  num,
+  nombres
 }) => {
   return (
     <Card
-      style={{ width: "18rem", border: "solid 3px #5E9CC8", background:"black" }}
-      className="m-2 text-center">
+      style={{
+        width: "18rem",
+        border: "solid 3px #5E9CC8",
+        background: "black",
+      }}
+      className=" general m-2 text-center"
+    >
       <Card.Body className="cuerpo">
-        <Card.Title className="titulo">
-          {nombre}
-        </Card.Title>
+        <Card.Title className="titulo">{nombre}</Card.Title>
         <Card.Img src={img}></Card.Img>
         <ListGroup>
-          <ListGroup.Item className="lista"><b>Color del cabello:  </b>{cabello}</ListGroup.Item>
-          <ListGroup.Item className="lista"><b>Color de ojos:  </b>{ojos}</ListGroup.Item>
-          <ListGroup.Item className="lista"><b>Color de piel:  </b>{piel}</ListGroup.Item>
-          <ListGroup.Item className="lista"><b>Género:  </b>{genero}</ListGroup.Item>
-          <ListGroup.Item className="lista"><b>Altura:  </b>{altura}</ListGroup.Item>
-          <ListGroup.Item className="lista"><b>Peso:  </b>{peso}</ListGroup.Item>
-          <ListGroup.Item className="lista"><b>Cumpleaños:  </b>{cumpleaños}</ListGroup.Item>
+          <ListGroup.Item className="lista">
+            <b>Color del cabello: </b>
+            {cabello}
+          </ListGroup.Item>
+          <ListGroup.Item className="lista">
+            <b>Color de ojos: </b>
+            {ojos}
+          </ListGroup.Item>
+          <ListGroup.Item className="lista">
+            <b>Color de piel: </b>
+            {piel}
+          </ListGroup.Item>
+          <ListGroup.Item className="lista">
+            <b>Género: </b>
+            {genero}
+          </ListGroup.Item>
+          <ListGroup.Item className="lista">
+            <b>Altura: </b>
+            {altura}
+          </ListGroup.Item>
+          <ListGroup.Item className="lista">
+            <b>Peso: </b>
+            {peso}
+          </ListGroup.Item>
+          <ListGroup.Item className="lista">
+            <b>Nacimiento: </b>
+            {cumpleaños}
+          </ListGroup.Item>
         </ListGroup>
-      
       </Card.Body>
-        <Button className="buttonCard" href={`/Details/${nombre}`}><p style={{marginBottom:"auto"}} >Detalles del personaje</p>{nombre}</Button>
+      <Link to={`/Details/${nombres}/${num}`} key={keyName}> 
+        <Button className="buttonCard">
+          <p style={{ marginBottom: "auto" }}>Detalles del personaje</p>
+          {nombres}
+        </Button>
+      </Link>
     </Card>
   );
 };

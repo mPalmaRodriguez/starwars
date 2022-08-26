@@ -44,3 +44,10 @@
   background-color: #FFE919;
   border-radius: 8px;
 }
+.general{
+  box-shadow: 0 0 5px black;
+  transition: all 0.2s ease-in-out;
+}
+.general:hover{
+  transform: scale(1.1);
+}

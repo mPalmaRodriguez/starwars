@@ -1,7 +1,15 @@
 .title{
     text-align: center;
+    font-size: 46px;
+    text-shadow: 0 0 4px #FFE919;
+    font-weight: bolder;
 }
 .tarjetas{
+    display: flex;
+    justify-content: center;
+}
+.tarjetas2{
+    margin-left: 265px;
     display: flex;
     justify-content: center;
 }
@@ -9,4 +17,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.tabla{
+    color: #FFE919;
+}
+.tablabody{
+    color: whitesmoke;
+}
+.detalle{
+    margin-top: 12px;
+    color: whitesmoke;
+    text-shadow: -5px 0 7px #FFE919;
+    font-weight: bolder;
+}
+.jeje{
+    margin-top: 90px;
+    border-top:2px double whitesmoke;
+}
+.detalle2{
+    color: #FFE919;
+    font-size: large;
+    font-weight: bolder;
+
+}
+.films{
+    color: whitesmoke;
 }
