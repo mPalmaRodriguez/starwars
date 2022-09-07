@@ -7,6 +7,7 @@ import { Route, Routes} from "react-router-dom";
 import Cardcharacter from './Pages/characters/Index';
 import Cardplanet from './Pages/planets/Index';
 import Details from './Components/Details/Details';
+import DetailsP from './Components/Details/DetailsP';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <Route path='/characters' element={<Cardcharacter/>}/>
       <Route path='/planets' element={<Cardplanet/>}/>
       <Route path='/Details/:nombres/:num' element={<Details/>}/>
+      <Route path='/DetailsP/:nombre/:numero' element={<DetailsP/>}/>
+
     </Routes>
     <FooterApp/>
     </div>
