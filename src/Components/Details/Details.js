@@ -30,10 +30,21 @@ export const Details = () => {
 
   const maping3 = filtro.map((persons) => persons.homeworld);
   var homeWorld = maping3[0];
-  console.log(homeWorld);
+  // console.log(homeWorld);
   getDetallePersonaje(homeWorld);
-  console.log(DataDetalle.name);
+  // console.log(DataDetalle.name);
 
+  // const maping4 = filtro.map((persons) => persons.vehicles);
+  // var vehicles = maping4[0];
+  // console.log(vehicles);
+  // getDetalleVehiculo(vehicles);
+  // console.log(DataVehiculo.name);
+
+// xd
+
+
+// const Peliculasxd = {...dataPeople, ...DataPelicula}
+// console.log(DataPelicula.name);
 
   return (
     <>

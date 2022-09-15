@@ -63,10 +63,10 @@ export const DetailsP = () => {
               <h1 className="detalle"> DETALLE DEL PLANETA</h1>
               <Table className="jeje">
                 <thead className="tabla">
-                  <th>rotation_period</th>
-                  <th>orbital_period</th>
-                  <th>diameter</th>
-                  <th>climate</th>
+                  <th>Período de rotación</th>
+                  <th>Período orbial</th>
+                  <th>Diámetro</th>
+                  <th>Clima</th>
                 </thead>
                 <tbody className="tablabody">
                   <tr>
@@ -77,10 +77,10 @@ export const DetailsP = () => {
                   </tr>
                 </tbody>
                 <thead className="tabla">
-                  <th>gravity</th>
-                  <th>terrain</th>
-                  <th>surface_water</th>
-                  <th>population</th>
+                  <th>Gravedad</th>
+                  <th>Terreno</th>
+                  <th>Aguas superficiales</th>
+                  <th>Popularidad</th>
                 </thead>
                 <tbody className="tablabody">
                   <tr>

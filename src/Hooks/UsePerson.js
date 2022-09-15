@@ -4,6 +4,8 @@ export const UsePerson = () => {
   const [dataPeople, setDataPeople] = useState([]);
   const [dataApi, setDataApi] = useState([]);
   const [DataDetalle, setDataDetalle] = useState([]);
+  // const [ DataVehiculo, setDataVehiculo] = useState([]);
+  // const [setDataPelicula, DataPelicula] = useState ([]);
 
   const [Contador, setContador] = useState(1);
 
@@ -83,6 +85,43 @@ export const UsePerson = () => {
       console.log(error);
     }
   };
+  // const getDetalleVehiculo = async (urlPersona)=>{
+  //   try{
+  //     var requestOptions = {
+  //       method: "GET",
+  //       redirect: "follow",
+  //     };
+
+  //     await fetch(
+  //       urlPersona,
+  //       requestOptions
+  //     )
+  //     .then((response) => response.json())
+  //     .then((result) => setDataVehiculo(result))
+  //     .catch((error) => console.log("error", error));
+  //   }catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+
+  // const getDetalleFilm = async (urlFilm)=>{
+  //   try{
+  //     var requestOptions = {
+  //       method: "GET",
+  //       redirect: "follow",
+  //     };
+  //     await fetch(
+  //       urlFilm,
+  //       requestOptions
+  //     )
+  //     .then((response) => response.json())
+  //     .then((result) => setDataPelicula(result))
+  //     .then((error) => console.log("error", error));
+  //   }catch (error){
+  //     console.log(error);
+  //   }
+  // };
 
   return {
     getAllPerson,
@@ -94,6 +133,11 @@ export const UsePerson = () => {
     dataApi,
     back,
     getDetallePersonaje,
-    DataDetalle
+    DataDetalle,
+    // getDetalleVehiculo,
+    // DataVehiculo,
+    // getDetalleFilm,
+    // DataPelicula
+
   };
 };
